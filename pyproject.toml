@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MinMaxScaling"
+version = "0.1"
+authors = [{name = "Krekhova Sofia", email="krekhova.ss@phystech.edu"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+['version']
+
+[tool.setuptools]
+packages = ["MinMaxScaling"]
+
+[tool.setuptools.package-data]
+MinMaxScaling = [
+    "python/*.so"
+]
