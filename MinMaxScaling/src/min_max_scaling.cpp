@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-double MinMaxScaling::MMS(const std::vector<double> &a) {
+std::vector<double> MinMaxScaling::MMS(const std::vector<double> &a) {
   if (a.empty()) {
     throw std::invalid_argument("Input vector is empty");
   }

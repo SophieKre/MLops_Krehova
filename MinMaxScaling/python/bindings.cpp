@@ -7,21 +7,18 @@ namespace py = pybind11;
 
 PYBIND11_MODULE(mse_core, m) {
   m.doc() = R"doc(
-    Python bindings for MeanSquaredError library
+    Python bindings for MinMaxScaling library
   )doc";
 
-  py::class_<MeanSquaredError>(m, "MeanSquaredError")
-      .def_static("MSE", &MeanSquaredError::MSE, R"doc(
-          Compute mean squared error using pure C++.
+  py::class_<MeanSquaredError>(m, "MinMaxScaling")
+      .def_static("MMS", &MinMaxScaling::MMS, R"doc(
+          Compute min max scaling using pure C++.
 
           Parameters:
-            a : list of float
-                The first vector.
-            b : list of float
-                The second vector.
-
+            a : list of float vector.
+          
           Returns:
             float
-                The mean squared error between two vectors.
+                The min max scaling of the vector.
       )doc");
 }

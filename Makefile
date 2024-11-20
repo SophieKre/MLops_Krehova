@@ -9,7 +9,7 @@ PYTHON_DIR=MinMaxScaling/python
 
 all: MeanSquaredError test
 
-MeanSquaredError: $(PYTHON_DIR)/bindings.o $(SRC_DIR)/min_max_scaling.o
+MinMaxScaling: $(PYTHON_DIR)/bindings.o $(SRC_DIR)/min_max_scaling.o
 	$(CXX) $^ -o $(PYTHON_DIR)/mms_core`python3-config --extension-suffix` $(PY_LDFLAGS) $(CXXFLAGS)
 
 $(PYTHON_DIR)/bindings.o: $(PYTHON_DIR)/bindings.cpp $(SRC_DIR)/min_max_scaling.h

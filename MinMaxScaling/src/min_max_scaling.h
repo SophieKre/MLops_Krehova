@@ -4,5 +4,5 @@
 
 class MinMaxScaling {
 public:
-  static double MMS(const std::vector<double> &a);
+  static std::vector<double> MMS(const std::vector<double> &a);
 };
